@@ -38,7 +38,7 @@ pipeline {
         stage('Richiamo Job Build'){    
             steps{
                 script{
-                    build job: 'PileneBuild',
+                    build job: 'GroovyBuild',
                         parameters:
                         [[$class:'StringParameterValue',name:'Directory',value:String.valueOf(Directory)],
                         [$class:'StringParameterValue',name:'GIT',value:String.valueOf(GIT)]]
@@ -49,7 +49,7 @@ pipeline {
           stage('Richiamo Job Deploy'){    
             steps{
                 script{
-                    build job: 'PipelineDeploy',
+                    build job: 'GroovyDeploy',
                         parameters:
                         [[$class:'StringParameterValue',name:'Directory',value:String.valueOf(Directory)],
                         [$class:'StringParameterValue',name:'GIT',value:String.valueOf(GIT)],
@@ -62,7 +62,7 @@ pipeline {
         stage('Richiamo Job RestartJboss'){    
             steps{
                 script{
-                    build job: 'JBossRestart',
+                    build job: 'GroovyRestart',
                         parameters:
                         [[$class:'StringParameterValue',name:'JBOSS',value:String.valueOf(JBOSS)]]
                         wait: true
