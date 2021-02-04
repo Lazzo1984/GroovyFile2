@@ -1,6 +1,7 @@
 JBOSS = "${JBOSS}"
 JBOSSWAR="${JBOSSWAR}"
 GIT="${GIT}"
+Folder = "${Folder}"
 Ditrectory="${Directory}"
 Path="${Directory}\\${GIT}\\target"
 PathCondiviso="../../../Build"
@@ -12,7 +13,7 @@ pipeline {
         steps{
          script{  
                     sh "pwd"
-                    dir("${JENKINS_HOME}"){
+                    dir("${Folder}"){
                     sh "mkdir -p ${Build}"
                     sh "cp ${Path}/${JBOSSWAR} ${PathCondiviso}"
                     }
