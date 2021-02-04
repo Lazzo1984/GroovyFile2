@@ -1,7 +1,7 @@
 JBOSS = "${JBOSS}"
 JBOSSWAR="${JBOSSWAR}"
 GIT="${GIT}"
-Folder = "${Folder}"
+Cartella="${Cartella}"
 Ditrectory="${Directory}"
 Path="${Directory}\\${GIT}\\target"
 PathCondiviso="../../../Build"
@@ -12,7 +12,7 @@ pipeline {
         steps{
          script{  
                     sh "pwd"
-                    dir("${Folder}"){
+                    dir("${Cartella}"){
                     sh "cp ${Path}/${JBOSSWAR} ${PathCondiviso}"
                     }
                 }
