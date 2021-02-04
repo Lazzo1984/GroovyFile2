@@ -12,8 +12,8 @@ pipeline {
          script{  
                     sh "pwd"
                     dir("${JENKINS_HOME}"){
-                    sh 'mkdir -p Build'
-                    sh 'cp ${Path}/${JBOSSWAR} ${PathCondiviso}'
+                    sh "mkdir -p Build"
+                    sh "cp ${Path}/${JBOSSWAR} ${PathCondiviso}"
                     }
                 }
             }
