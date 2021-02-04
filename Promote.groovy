@@ -3,7 +3,7 @@ JBOSSWAR="${JBOSSWAR}"
 GIT="${GIT}"
 Cartella="${Cartella}"
 Ditrectory="${Directory}"
-Path="${Directory}\\${GIT}\\target"
+Path="${Directory}/${GIT}/target"
 PathCondiviso="../../../Build"
 pipeline {
     agent any
