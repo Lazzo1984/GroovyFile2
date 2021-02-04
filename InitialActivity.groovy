@@ -2,7 +2,7 @@ def folder = "${GIT}"
 def Directory = "${Directory}"
 def JBOSS = "${JBOSS}"
 def JBOSSWAR = "${JBOSSWAR}"
-def Folder = "${Folder}"
+def Cartella = "${Cartella}"
 pipeline {
     agent any
         stages{
@@ -79,7 +79,7 @@ pipeline {
                         [$class:'StringParameterValue',name:'GIT',value:String.valueOf(GIT)],
                         [$class:'StringParameterValue',name:'JBOSS',value:String.valueOf(JBOSS)],
                         [$class:'StringParameterValue',name:'JBOSSWAR',value:String.valueOf(JBOSSWAR)],
-                         [$class:'StringParameterValue',name:'Folder',value:String.valueOf(Folder)]]
+                         [$class:'StringParameterValue',name:'Folder',value:String.valueOf(Cartella)]]
                         wait: true
                     }
                 }
