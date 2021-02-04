@@ -69,6 +69,19 @@ pipeline {
                     }
                 }
             }
+         stage('Richiamo Job Promote'){    
+            steps{
+                script{
+                    build job: 'GroovyPromote',
+                        parameters:
+                        [[$class:'StringParameterValue',name:'Directory',value:String.valueOf(Directory)],
+                        [$class:'StringParameterValue',name:'GIT',value:String.valueOf(GIT)],
+                        [$class:'StringParameterValue',name:'JBOSS',value:String.valueOf(JBOSS)],
+                        [$class:'StringParameterValue',name:'JBOSSWAR',value:String.valueOf(JBOSSWAR)]]
+                        wait: true
+                    }
+                }
+            }
             
         }
         post {
