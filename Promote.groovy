@@ -13,7 +13,7 @@ pipeline {
          script{  
                     sh "pwd"
                     dir("${Cartella}"){
-                    sh "cp ${Path}//${JBOSSWAR} ${PathCondiviso}"
+                    sh "cp ${Path}/${JBOSSWAR} ${PathCondiviso}"
                     }
                 }
             }
