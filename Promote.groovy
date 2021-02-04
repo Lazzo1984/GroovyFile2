@@ -5,7 +5,6 @@ Folder = "${Folder}"
 Ditrectory="${Directory}"
 Path="${Directory}\\${GIT}\\target"
 PathCondiviso="../../../Build"
-Build="${Build}"
 pipeline {
     agent any
         stages{
@@ -14,7 +13,6 @@ pipeline {
          script{  
                     sh "pwd"
                     dir("${Folder}"){
-                    sh "mkdir -p ${Build}"
                     sh "cp ${Path}/${JBOSSWAR} ${PathCondiviso}"
                     }
                 }
