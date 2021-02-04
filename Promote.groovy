@@ -13,7 +13,7 @@ pipeline {
          script{  
                     sh "pwd"
                     dir("${Cartella}"){
-                    sh "mkdir ../../Build"
+                    sh "mkdir -p ../../Build"
                     sh "cp ${Path}/${JBOSSWAR} ${PathCondiviso}"
                     }
                 }
