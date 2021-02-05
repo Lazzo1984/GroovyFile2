@@ -4,7 +4,7 @@ GIT="${GIT}"
 Cartella="${Cartella}"
 Ditrectory="${Directory}"
 Path="${Directory}/${GIT}/target"
-PathCondiviso="../../Build"
+PathCondiviso="../../shared_directory"
 pipeline {
     agent any
         stages{
